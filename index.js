@@ -8,7 +8,12 @@ app.engine('.hbs', expresshbs({defaultLayout: 'main', extname: '.hbs'}))
 app.set('view engine', '.hbs')
 
 app.get('/', (req, res) => {
-  res.render('index', {title: 'Hello Dave!'});
+  res.render('index', {
+    title: 'Handlebars playground',
+    article: {
+      title: 'Examples of templating with handlebars'
+    }
+  });
 })
 
 app.listen(3000);
