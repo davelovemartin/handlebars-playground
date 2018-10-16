@@ -8,7 +8,7 @@ Templating fun with [Handlebars](http://handlebarsjs.com) made with [Express Han
 * cannot contain any of: `whitespace` `!` `"` `#` `%` `&` `'` `(` `)` `*` `+` `,` `.` `/` `;` `<` `=` `>` `@` `[` `\` `]` `^` `{` `|` `}` `~`
 * can use triple curly-braces: `{{{body}}}` if you don't want to escape an expression.
 
-Block expressions:
+## Block expressions:
 * the helper receives an options hash which has a function `options.fn` that behaves like a normal handlebars template
 * Identified with a `#` and has a closing 'mustache' of the same name preceded with `/`
 `{{#list people}}{{firstName}} {{lastName}}{{/list}}`
@@ -30,3 +30,10 @@ Block expressions:
     Handlebars.registerHelper('with', function(context, options) {
       return options.fn(context);
     })
+
+## Paths
+* Handlebars supports paths so you can traverse JSON data.
+* paths can include `../` that evaluate their paths against a parent context
+
+## Comments
+* Comments can either be delineated with `{{!!-- this notation --}}` `{{! or this notation }}`
