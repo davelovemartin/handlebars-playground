@@ -4,3 +4,10 @@
 {{!!-- using this style allows you to add in braces --}}
 <h2>{{article.title}}</h2>
 {{#list people}}{{firstName}} {{lastName}}{{/list}}
+<div class="entry">
+{{!!-- example of passing a context into a helper --}}
+  {{#with article}}
+  <div class="intro">{{{intro}}}</div>
+  <div class="body">{{{body}}}</div>
+  {{/with}}
+</div>

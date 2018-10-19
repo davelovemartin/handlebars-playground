@@ -30,6 +30,8 @@ Templating fun with [Handlebars](http://handlebarsjs.com) made with [Express Han
     Handlebars.registerHelper('with', function(context, options) {
       return options.fn(context);
     })
+* helpers receive the current context as the `this` context of the function. So,
+
 
 ## Paths
 * Handlebars supports paths so you can traverse JSON data.
